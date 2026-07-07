@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasta Beach Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- LOADING SCREEN -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <!-- Εδώ θα βάλεις το λογότυπό σου (π.χ. logo.png) -->
+            <img src="logo.png" alt="Bar Logo" class="loading-logo">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- ΚΥΡΙΩΣ ΜΕΝΟΥ (Κρυφό στην αρχή) -->
+    <div id="main-app" class="hidden">
+        <header class="menu-header">
+            <h1 class="brand-name">KASTA</h1>
+            <p class="brand-sub">BEACH BAR & RESTAURANT</p>
+        </header>
+
+        <!-- Οι νέες κατηγορίες σου -->
+        <nav class="categories-bar">
+            <button class="nav-link active" onclick="switchCategory('coffee')">COFFEE</button>
+            <button class="nav-link" onclick="switchCategory('drinks')">DRINKS</button>
+            <button class="nav-link" onclick="switchCategory('cocktails')">COCKTAILS</button>
+            <button class="nav-link" onclick="switchCategory('refreshments')">REFRESHMENTS</button>
+            <button class="nav-link" onclick="switchCategory('food')">FOOD</button>
+        </nav>
+
+        <main id="menu-wrapper" class="menu-content"></main>
+    </div>
+
+    <script src="menu-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
