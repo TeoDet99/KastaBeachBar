@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ammos Beach Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loading-screen">
+        <div class="loading-content">
+            <img src="logo.png" alt="Bar Logo" class="loading-logo">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <div id="main-app" class="hidden">
+        <header class="menu-header">
+            <h1 class="brand-name">AMMOS</h1>
+            <p class="brand-sub">BEACH BAR & RESTAURANT</p>
+        </header>
+
+        <div id="categories-screen" class="grid-container">
+            <div class="category-card" onclick="selectCategory('coffee')">COFFEE</div>
+            <div class="category-card" onclick="selectCategory('drinks')">DRINKS</div>
+            <div class="category-card" onclick="selectCategory('cocktails')">COCKTAILS</div>
+            <div class="category-card" onclick="selectCategory('refreshments')">REFRESHMENTS</div>
+            <div class="category-card" onclick="selectCategory('food')">FOOD</div>
+        </div>
+
+        <div id="products-screen" class="hidden">
+            <div class="navigation-back">
+                <button class="back-btn" onclick="showCategoriesHome()">← Πίσω στις Κατηγορίες</button>
+                <h2 id="current-category-title">COFFEE</h2>
+            </div>
+            <main id="menu-wrapper" class="menu-content"></main>
+        </div>
+    </div>
+
+    <script src="menu-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
